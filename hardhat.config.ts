@@ -14,7 +14,7 @@ const config: HardhatUserConfig = {
 		alwaysGenerateOverloads: false,
 	},
 	gasReporter: {
-		enabled: process.env.REPORT_GAS,
+		enabled: process.env.REPORT_GAS?.toLowerCase().trim() === 'true',
 	},
 };
 
